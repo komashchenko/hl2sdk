@@ -1195,7 +1195,7 @@ PLATFORM_INTERFACE void Plat_DebugString( const tchar * );
 
 PLATFORM_INTERFACE bool Plat_IsInDebugSession();
 
-#define	DebuggerBreakIfDebugging() if ( !Plat_IsInDebugSession() ) ; else DebuggerBreak()
+#define	DebuggerBreakIfDebugging() if ( Plat_IsInDebugSession() ) DebuggerBreak()
 
 //-----------------------------------------------------------------------------
 // Message Box
